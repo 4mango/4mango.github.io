@@ -115,6 +115,10 @@
               $('.error-message').show();
               return;
           }
+          if (!validateEmail(email)) {
+            $('.error-message').show();
+            return;
+          }
           $.ajax({
            type: "POST",
            url: "https://docs.google.com/forms/u/4/d/e/1FAIpQLSdwxN5gV7R3h-ywsOwBkBCDriEKogh-cKGHy3eByFPkFZBCWA/formResponse",
@@ -129,6 +133,11 @@
             });
            });
         });
+
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
     </script>
   </body>
 </html>
