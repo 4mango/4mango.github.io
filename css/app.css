@@ -1,4 +1,13 @@
-button span {
-    /*overwriting*/
-    color: white;
+label.required:after {
+  content: " *";
+  color: red;
 }
+
+.hidden {
+    display: none;
+}
+
+.my-feedback {
+	min-height: 475px;
+}
+

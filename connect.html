@@ -54,27 +54,38 @@
 
     <main role="main">
       <section class="jumbotron pt-5">
-        <div class="container">
+        <div class="container my-feedback">
           <h1 class="jumbotron-heading">Contact Us</h1>
-          <form action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSdwxN5gV7R3h-ywsOwBkBCDriEKogh-cKGHy3eByFPkFZBCWA/formResponse" target="_self" method="POST" id="mG61Hd" name="mG61Hd" class="mG61Hd">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Name</label>
-              <input type="text " class="quantumWizTextinputPaperinputInput exportInput form-control" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Name" aria-describedby="i.desc.1633920210 i.err.1633920210" name="entry.2005620554" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value="" aria-describedby="emailHelp" placeholder="Enter name">
+          <div id="mG61Hd_FRM">
+            <form action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSdwxN5gV7R3h-ywsOwBkBCDriEKogh-cKGHy3eByFPkFZBCWA/formResponse" target="_self" method="POST" id="mG61Hd" name="mG61Hd" class="mG61Hd">
+              <div class="form-group">
+                <label for="entry.2005620554" class="required">Name</label>
+                <input type="text " class="name quantumWizTextinputPaperinputInput exportInput form-control" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Name" aria-describedby="i.desc.1633920210 i.err.1633920210" name="entry.2005620554" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value="" aria-describedby="emailHelp" placeholder="Enter name" required>
+              </div>
+              <div class="form-group">
+                <label for="entry.1045781291" class="required">Email</label>
+                <input type="email" class="email quantumWizTextinputPaperinputInput exportInput form-control" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Email" aria-describedby="i.desc.227649005 i.err.227649005" name="entry.1045781291" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value="" placeholder="Enter email" required>
+              </div>
+              <div class="form-group">
+                <label for="entry.2072744061">Organization</label>
+                <input type="text" class="quantumWizTextinputPaperinputInput exportInput form-control" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Organization" aria-describedby="i.desc.947507513 i.err.947507513" name="entry.2072744061" value="" dir="auto" data-initial-dir="auto" data-initial-value="" placeholder="Enter organization details">
+              </div>
+              <div class="form-group">
+                <label for="entry.839337160" class="required">Query or Requirement</label>
+                <textarea class="query quantumWizTextinputPapertextareaInput exportTextarea form-control" jsname="YPqjbf" data-rows="1" tabindex="0" aria-label="Query or Requirement" jscontroller="gZjhIf" jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" required="" name="entry.839337160" dir="auto" data-initial-dir="auto" data-initial-value="" aria-describedby="i.desc.1846923513 i.err.1846923513" style="height: 74px;" placeholder="Enter your query or requirement" required></textarea>
+              </div>
+            </form>
+            <div class="alert alert-danger hidden error-message" role="alert">
+              Please enter valid data in all mandatory fields.
             </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email</label>
-              <input type="email" class="quantumWizTextinputPaperinputInput exportInput form-control" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Email" aria-describedby="i.desc.227649005 i.err.227649005" name="entry.1045781291" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value="" placeholder="Enter email">
+            <button class="btn btn-success" id="submit">submit</button>
+          </div>
+          <div class="hidden" id="mG61Hd_MSG">
+            <div class="alert alert-success" role="alert">
+              We have received your query, very soon we will be contacting you to discuss further.
             </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Organization</label>
-              <input type="text" class="quantumWizTextinputPaperinputInput exportInput form-control" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Organization" aria-describedby="i.desc.947507513 i.err.947507513" name="entry.2072744061" value="" dir="auto" data-initial-dir="auto" data-initial-value="" placeholder="Enter organization details">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Query or Requirement</label>
-              <textarea class="quantumWizTextinputPapertextareaInput exportTextarea form-control" jsname="YPqjbf" data-rows="1" tabindex="0" aria-label="Query or Requirement" jscontroller="gZjhIf" jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" required="" name="entry.839337160" dir="auto" data-initial-dir="auto" data-initial-value="" aria-describedby="i.desc.1846923513 i.err.1846923513" style="height: 74px;" placeholder="Enter your query or requirement"></textarea>
-            </div>
-          </form>
-          <button class="btn btn-success" id="submit">submit</button>
+            <a href="index.html" class="btn btn-primary my-2">Back to Home</a>
+          </div>
         </div>
       </section>
 
@@ -93,14 +104,17 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/holder.min.js"></script>
     <script>
         $(function() {
          $("button#submit").click(function(){ 
+          var name = $('.name').val(), email = $('.email').val(), query = $('.query').val();
+          if (name == '' || email == '' || query == '') {
+              $('.error-message').show();
+              return;
+          }
           $.ajax({
            type: "POST",
            url: "https://docs.google.com/forms/u/4/d/e/1FAIpQLSdwxN5gV7R3h-ywsOwBkBCDriEKogh-cKGHy3eByFPkFZBCWA/formResponse",
@@ -109,7 +123,8 @@
                     console.log("Success");
              },
              error: function(){
-              console.log("Failure");
+                $('#mG61Hd_FRM').hide();
+                $('#mG61Hd_MSG').show();
              }
             });
            });
